@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bookinfo-dev-ratings
+  name: {{ .Release.Name }}
   namespace: {{ .Values.ratings.namespace }}
   labels:
-    app: bookinfo-dev-ratings
+    app: {{ .Release.Name }}
 spec:
   replicas: {{ .Values.ratings.replicas }}
   selector:
     matchLabels:
-      app: bookinfo-dev-ratings
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels:
