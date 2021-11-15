@@ -21,3 +21,4 @@ extraEnvSecret:
     bookinfo-prd-ratings-mongodb-secret: mongodb-password
   MONGO_ROOT_PASSWORD:
     bookinfo-prd-ratings-mongodb-secret: mongodb-root-password
+    

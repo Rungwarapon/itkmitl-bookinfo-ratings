@@ -9,4 +9,3 @@ spec:
   - port: {{.Values.ratings.port}}
   selector:
     app: {{.Release.Name}}
-    
