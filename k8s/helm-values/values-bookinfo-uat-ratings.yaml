@@ -21,4 +21,3 @@ extraEnvSecret:
     bookinfo-uat-ratings-mongodb-secret: mongodb-password
   MONGO_ROOT_PASSWORD:
     bookinfo-uat-ratings-mongodb-secret: mongodb-root-password
-

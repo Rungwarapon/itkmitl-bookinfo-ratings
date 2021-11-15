@@ -8,4 +8,3 @@ auth:
 persistence:
   enabled: false
 initdbScriptsConfigMap: bookinfo-uat-ratings-mongodb-initdb
-
