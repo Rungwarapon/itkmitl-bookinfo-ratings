@@ -2,7 +2,7 @@ name: uat-env
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -44,9 +44,9 @@ jobs:
                 "COMMIT_SHA": "${{ github.sha }}"
               }
             }
-curl:
-  need: deploy
-  runs-on: ubuntu-20.04
-  steps:
-    - name: curl
-      run : curl http://itkmitl.bookinfo.uat.opsta.net/student[X]/ratings/health | grep "Ratings is working"
+  curl:
+    need: deploy
+    runs-on: ubuntu-20.04
+    steps:
+      - name: curl
+        run : curl http://itkmitl.bookinfo.uat.opsta.net/student[X]/ratings/health | grep "Ratings is working"
