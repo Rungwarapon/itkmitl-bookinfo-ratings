@@ -20,5 +20,5 @@ extraEnvSecret:
   MONGO_DB_PASSWORD:
     bookinfo-dev-ratings-mongodb-secret: mongodb-password
   MONGO_ROOT_PASSWORD:
-    bookinfo-dev-details-mongodb-secret: mongodb-root-password
+    bookinfo-dev-ratings-mongodb-secret: mongodb-root-password
     
