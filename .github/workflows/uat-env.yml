@@ -2,7 +2,7 @@ name: uat-env
 on:
   push:
     branches:
-      - dev
+      - master
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -33,7 +33,7 @@ jobs:
       - name: deploy
         uses: deliverybot/helm@v1
         with:
-          helm: helm
+          helm: helm3
           release: bookinfo-uat-ratings
           namespace: student10-bookinfo-uat
           chart: k8s/helm
@@ -44,3 +44,9 @@ jobs:
                 "COMMIT_SHA": "${{ github.sha }}"
               }
             }
+curl:
+  need: deploy
+  runs-on: ubuntu-20.04
+  steps:
+    - name: curl
+      run : curl http://itkmitl.bookinfo.uat.opsta.net/student[X]/ratings/health | grep "Ratings is working"
