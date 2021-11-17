@@ -50,3 +50,4 @@ jobs:
     steps:
       - name: curl
         run : curl http://itkmitl.bookinfo.uat.opsta.net/student10/ratings/health | grep "Ratings is working"
+
