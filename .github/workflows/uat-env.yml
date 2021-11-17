@@ -33,7 +33,7 @@ jobs:
       - name: deploy
         uses: deliverybot/helm@v1
         with:
-          helm: helm3
+          helm: helm
           release: bookinfo-uat-ratings
           namespace: student10-bookinfo-uat
           chart: k8s/helm
